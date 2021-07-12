@@ -1,0 +1,39 @@
+:  
+密钥库类型: jks
+密钥库提供方: SUN
+
+您的密钥库包含 1 个条目
+
+别名: test
+创建日期: 2021-7-12
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=KQ, OU=KQ, O=KQ, L=HZ, ST=HZ, C=CN
+发布者: CN=KQ, OU=KQ, O=KQ, L=HZ, ST=HZ, C=CN
+序列号: 220e53df
+有效期为 Mon Jul 12 18:25:34 CST 2021 至 Fri Jul 06 18:25:34 CST 2046
+证书指纹:
+	 MD5:  E1:5D:95:0F:2E:3F:27:5E:CD:85:4B:3F:CC:75:6D:8C
+	 SHA1: 98:38:BD:F2:BA:55:5D:31:F0:08:B2:F3:AF:FD:D8:CB:A0:EC:09:C9
+	 SHA256: 60:57:75:E1:E0:9A:E2:8F:1B:29:A4:F6:62:12:C5:0F:17:3B:EF:9C:E9:A5:8C:DC:57:A3:6D:4A:08:9F:D3:25
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 3
+
+扩展: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 2A 92 F8 FC 0B 2E 49 9B   A5 C2 D6 97 9C 61 C5 47  *.....I......a.G
+0010: 00 FC 8E C0                                        ....
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
