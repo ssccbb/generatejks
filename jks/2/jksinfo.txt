@@ -4,19 +4,19 @@
 
 您的密钥库包含 1 个条目
 
-别名: test
-创建日期: 2021-7-12
+别名: yr
+创建日期: 2021-12-21
 条目类型: PrivateKeyEntry
 证书链长度: 1
 证书[1]:
-所有者: CN=KQ, OU=KQ, O=KQ, L=HZ, ST=HZ, C=CN
-发布者: CN=KQ, OU=KQ, O=KQ, L=HZ, ST=HZ, C=CN
-序列号: 7ebeda89
-有效期为 Mon Jul 12 18:25:30 CST 2021 至 Fri Jul 06 18:25:30 CST 2046
+所有者: CN=com.jks.demo, OU=KQ, O=KQ, L=HZ, ST=HZ, C=CN
+发布者: CN=com.jks.demo, OU=KQ, O=KQ, L=HZ, ST=HZ, C=CN
+序列号: 361146a7
+有效期为 Tue Dec 21 16:57:15 CST 2021 至 Sat Dec 15 16:57:15 CST 2046
 证书指纹:
-	 MD5:  A3:5C:FA:4D:98:C0:98:CF:22:2F:28:57:4A:9B:98:3B
-	 SHA1: 70:17:BD:DB:98:A6:E7:BB:16:25:2F:79:68:6C:76:38:6F:04:E3:73
-	 SHA256: 8A:AF:F0:AB:16:32:ED:73:3B:D8:36:FF:96:1D:83:6A:0E:52:5B:8E:F9:BC:05:F9:7C:87:0B:D2:95:8A:3E:BD
+	 MD5:  14:6E:72:84:CA:FA:52:78:E4:79:C7:FB:DE:D3:95:DE
+	 SHA1: F9:50:2F:F4:6C:6E:DA:0F:34:D1:57:12:AA:90:D4:FA:FA:4F:70:ED
+	 SHA256: 1F:96:81:0D:3F:C8:CD:74:40:BD:CD:83:60:25:3C:C4:28:93:74:F1:CC:19:B2:F9:0B:6E:72:54:FD:69:C1:5D
 签名算法名称: SHA256withRSA
 主体公共密钥算法: 2048 位 RSA 密钥
 版本: 3
@@ -26,8 +26,8 @@
 #1: ObjectId: 2.5.29.14 Criticality=false
 SubjectKeyIdentifier [
 KeyIdentifier [
-0000: 40 29 BD CB C4 1D D7 55   54 C2 A6 2D 34 04 AF 00  @).....UT..-4...
-0010: 1A 6E 03 A4                                        .n..
+0000: 47 7F B1 B3 53 66 16 E5   62 A2 D2 6A 84 60 FC 74  G...Sf..b..j.`.t
+0010: 4E 8F E9 77                                        N..w
 ]
 ]
 

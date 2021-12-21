@@ -1,12 +1,12 @@
 # -*- coding: UTF-8 -*-
-import os, config, shutil
+import os, shutil, config
 
 _jks_file_ = config.__dir + "/jks"
 _jks_info_ = "jksinfo.txt"
 
 
 # 准备文件夹
-def mkdir():
+def mkdirs():
     delete()
     os.mkdir(_jks_file_)
     print("path(" + _jks_file_ + ") has creat!")
@@ -17,8 +17,21 @@ def mkdir():
     pass
 
 
+def mkdir(_name):
+    _dir = config.__dir + "/" + _name
+    if os.path.exists(_dir):
+        for _child_file in os.listdir(_dir):
+            # 删除jksinfo.txt & xxx.jks
+            os.remove(_dir + "/" + _child_file)
+            print("path(" + _dir + "/" + _child_file + ") already remove")
+        os.rmdir(_dir)
+        print("path(" + _dir + ") already remove")
+    os.mkdir(_dir)
+    pass
+
+
 # 创建jksinfo.txt
-def creat_jksinfo():
+def creat_jksinfos():
     _need_jksinfo = config.__jks_info
     if not _need_jksinfo:
         print("do not need jksinfo.txt! skip")
@@ -30,6 +43,16 @@ def creat_jksinfo():
         _file.truncate()
         _file.close()
         print(_file)
+    pass
+
+
+def creat_jksinfo(_package):
+    # 不存在会自动创建
+    _file = open(config.__dir + "/" + _package + "/" + _jks_info_, "w")
+    # 清空文本文件内容
+    _file.truncate()
+    _file.close()
+    print(_file)
     pass
 
 
@@ -58,7 +81,7 @@ def deleteOldJKS(_file):
 
 # 写入jksinfo
 def writeJKSInfo(_jks_info, _jks_info_dir):
-    print("start write file ..."+_jks_info_dir)
+    print("start write file ..." + _jks_info_dir)
     if os.path.exists(_jks_info_dir):
         _jks_file = open(_jks_info_dir, "w")
         _jks_file.write(_jks_info)

@@ -4,7 +4,7 @@ import os
 print("-----------------------------")
 
 # 需要的jks数量
-__jks_number = 5
+__jks_number = 2
 # 是否需要生成jksinfo.txt保存md5等相关信息
 __jks_info = True
 
@@ -13,13 +13,13 @@ print("need jksinfo.txt : " + str(__jks_info))
 
 __dir = os.path.abspath(".")
 # keystore：设置生成的文件名称，包含后缀
-__keystore = "test_key.jks"
+__keystore = "yr_release_key.jks"
 # alias：设置别名
-__alias = "test"
+__alias = "yr"
 # storepass：设置文件的密码
-__storepass = "test01"
+__storepass = "aaaaaaa"
 # keypass：设置key的密码
-__keypass = "test01"
+__keypass = "aaaaaaa"
 # keyalg：设置使用的加密算法，一般写RSA
 __keyalg = "RSA"
 # keysize：指定密钥长度（默认 1024）
@@ -36,7 +36,11 @@ print("jks keyalq : " + __keyalg)
 print("jks keysize : " + str(__keysize))
 print("jks validity : " + str(__validity))
 
-# 额外信息公司名
+# 额外拥有者用户名
+__owner = "com.jks.demo"
+# 额外组织单位名称
+__comp_subname = "KQ"
+# 额外组织名称
 __comp_name = "KQ"
 # 额外信息地址
 __comp_location = "HZ"

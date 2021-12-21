@@ -10,6 +10,10 @@
         | - 序号             （以序号表示）
             | - jksinfo.txt （jks相关信息）
             | - xx.jks      （jks文件）
-    | - shell.py            （脚本执行程序）
-    | - utils.py            （核心代码封装）
+    | - com.xxx.xxx         （自动生成存放单个对应包名的jks相关文件）
+        | - jksinfo.txt     （jks相关信息）
+        | - xx.jks          （jks文件）
+    | - multishell.py       （批量生成脚本执行程序）
     | - config.py           （相关配置封装，配置详情请查看对应注释）
+    | - singleshell.py      （单个生成脚本执行程序）
+    | - utils.py            （核心代码封装）
