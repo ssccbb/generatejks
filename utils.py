@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-import os, shutil, config
+import os, shutil, config, randompackage
 
 _jks_file_ = config.__dir + "/jks"
 _jks_info_ = "jksinfo.txt"
@@ -7,12 +7,26 @@ _jks_info_ = "jksinfo.txt"
 
 # 准备文件夹
 def mkdirs():
+    print("mkdir() excute! whithout packagename...")
     delete()
     os.mkdir(_jks_file_)
     print("path(" + _jks_file_ + ") has creat!")
     print("need jks number -- " + str(config.__jks_number) + " -- ready to create path...")
     for num in range(config.__jks_number):
         os.mkdir(_jks_file_ + "/" + str(num + 1))
+    print("listdir -- " + str(os.listdir(_jks_file_)))
+    pass
+
+
+def mkdirs_with_package():
+    print("mkdirs_with_package() excute! whith packagename...")
+    _packages = randompackage.random_package_list(config.__jks_number)
+    delete()
+    os.mkdir(_jks_file_)
+    print("path(" + _jks_file_ + ") has creat!")
+    print("need jks number -- " + str(config.__jks_number) + " -- ready to create path...")
+    for _package in _packages:
+        os.mkdir(_jks_file_ + "/" + _package)
     print("listdir -- " + str(os.listdir(_jks_file_)))
     pass
 

@@ -1,9 +1,12 @@
 # -*- coding: UTF-8 -*-
 import os, config, utils, pexpect, time, sys
 
-# 批量生成
+# 批量生成jks
 # 开始创建需要的文件夹
-utils.mkdirs()
+if config.__random_package:
+    utils.mkdirs_with_package()
+else:
+    utils.mkdirs()
 # 创建需要的保存jks信息的txt
 utils.creat_jksinfos()
 
@@ -17,7 +20,10 @@ for _dir in os.listdir(utils._jks_file_):
     # 交互输入开始
     child = pexpect.spawn(_shell_genkey)
     child.expect("您的名字与姓氏是什么")
-    child.sendline(config.__owner)
+    if config.__random_package:
+        child.sendline(_dir)
+    else:
+        child.sendline(config.__owner)
     child.expect("您的组织单位名称是什么")
     child.sendline(config.__comp_subname)
     child.expect("您的组织名称是什么")

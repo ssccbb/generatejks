@@ -7,9 +7,12 @@ print("-----------------------------")
 __jks_number = 2
 # 是否需要生成jksinfo.txt保存md5等相关信息
 __jks_info = True
+# 是否需要自动随机生成包名
+__random_package = True
 
 print("need number : " + str(__jks_number))
 print("need jksinfo.txt : " + str(__jks_info))
+print("need random package : " + str(__random_package))
 
 __dir = os.path.abspath(".")
 # keystore：设置生成的文件名称，包含后缀
@@ -37,7 +40,7 @@ print("jks keysize : " + str(__keysize))
 print("jks validity : " + str(__validity))
 
 # 额外拥有者用户名
-__owner = "com.jks.demo"
+__owner = "KQ"
 # 额外组织单位名称
 __comp_subname = "KQ"
 # 额外组织名称

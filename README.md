@@ -17,3 +17,4 @@
     | - config.py           （相关配置封装，配置详情请查看对应注释）
     | - singleshell.py      （单个生成脚本执行程序）
     | - utils.py            （核心代码封装）
+    | - randompackage.py    （随机生成包名封装）
