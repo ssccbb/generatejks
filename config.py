@@ -16,13 +16,13 @@ print("need random package : " + str(__random_package))
 
 __dir = os.path.abspath(".")
 # keystore：设置生成的文件名称，包含后缀
-__keystore = "yr_release_key.jks"
+__keystore = "release_key.jks"
 # alias：设置别名
-__alias = "yr"
+__alias = "sung"
 # storepass：设置文件的密码
-__storepass = "aaaaaaa"
+__storepass = "aaaaaaaaa"
 # keypass：设置key的密码
-__keypass = "aaaaaaa"
+__keypass = "aaaaaaaaa"
 # keyalg：设置使用的加密算法，一般写RSA
 __keyalg = "RSA"
 # keysize：指定密钥长度（默认 1024）

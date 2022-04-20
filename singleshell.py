@@ -6,7 +6,7 @@ import utils, pexpect, time, sys, config
 
 
 # 额外拥有者用户名
-__owner = "com.jks.demo"
+__owner = "com.sung.demo"
 # 额外组织单位名称
 __comp_subname = "HJ"
 # __comp_subname = "HY"

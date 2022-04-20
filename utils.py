@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-import os, shutil, config, randompackage
+import os, shutil, config, random
 
 _jks_file_ = config.__dir + "/jks"
 _jks_info_ = "jksinfo.txt"
@@ -20,7 +20,7 @@ def mkdirs():
 
 def mkdirs_with_package():
     print("mkdirs_with_package() excute! whith packagename...")
-    _packages = randompackage.random_package_list(config.__jks_number)
+    _packages = random_package_list(config.__jks_number)
     delete()
     os.mkdir(_jks_file_)
     print("path(" + _jks_file_ + ") has creat!")
@@ -103,3 +103,30 @@ def writeJKSInfo(_jks_info, _jks_info_dir):
         print("write done!")
         pass
     pass
+
+
+# 随机包名
+def random_package():
+    _center_lenght = random.randint(4, 7)
+    _end_lenght = random.randint(5, 8)
+
+    _strlist = list(random.sample('zyxwvutsrqponmlkjihgfedcba', _center_lenght + _end_lenght))
+    _strlist.insert(_center_lenght, ".")
+    _full_packagename = "com." + "".join(_strlist)
+
+    return _full_packagename
+
+
+# 随机包名列表
+def random_package_list(_size):
+    print("need package size --> " + str(_size))
+    _package_list = set()
+    print("random package generating...")
+    while len(_package_list) < _size:
+        _new_package = random_package()
+        if _new_package in _package_list:
+            _new_package = random_package()
+            pass
+        _package_list.add(_new_package)
+    print("random package generate compelete!")
+    return _package_list
